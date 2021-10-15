@@ -1,0 +1,63 @@
+# grub -- needed for os-prober
+sys-boot/grub:2 mount
+
+# git
+dev-vcs/git -perl -webdav
+
+# sudo
+app-admin/sudo -ssl -sendmail
+
+# firefox
+media-libs/freetype harfbuzz
+
+# mpv
+media-video/mpv drm -uchardet LUA_SINGLE_TARGET: -* luajit
+
+# pass
+app-admin/pass dmenu
+
+# lua
+dev-lua/* LUA_TARGETS: -* luajit
+dev-lua/* LUA_SINGLE_TARGET: -* luajit
+
+# nvim
+app-editors/neovim -nvimpager LUA_SINGLE_TARGET: -* luajit
+
+# Alsa
+media-plugins/alsa-plugins speex
+
+# gpg
+app-crypt/gnupg -smartcard
+
+# pinentry
+app-crypt/pinentry gtk -ncurses
+app-crypt/gcr gtk
+
+# tor
+net-vpn/tor tor-hardening -server
+
+# ncmpcpp - mpd
+dev-libs/boost icu
+media-sound/ncmpcpp lto
+media-sound/mpd -cue -audiofile -dbus -curl -fifo -id3tag -network
+
+# gentoo-sources
+sys-kernel/gentoo-sources symlink
+
+# picom
+x11-misc/picom opengl
+
+# zathura
+app-text/poppler cairo
+
+# nnn
+app-misc/nnn nerd-icons
+
+# xdg-open
+app-text/xmlto text
+
+# sxiv
+media-gfx/sxiv gif webp
+
+# intel ucode
+sys-firmware/intel-microcode initramfs

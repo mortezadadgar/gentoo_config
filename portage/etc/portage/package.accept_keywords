@@ -1,0 +1,14 @@
+app-editors/neovim ~amd64
+www-client/qutebrowser ~amd64
+dev-python/adblock ~amd64
+dev-util/maturin ~amd64
+app-misc/nnn ~amd64
+dev-libs/light ~amd64
+dev-util/perf ~amd64
+media-sound/pulseaudio-ctl ~amd64
+net-im/telegram-desktop-bin ~amd64
+media-sound/mpd ~amd64
+sys-power/intel-undervolt ~amd64
+sys-apps/fd ~amd64
+sys-kernel/gentoo-sources ~amd64
+sys-kernel/gentoo-kernel/bin ~amd64
