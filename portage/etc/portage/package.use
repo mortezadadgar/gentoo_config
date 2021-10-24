@@ -43,6 +43,7 @@ media-sound/mpd -cue -audiofile -dbus -curl -fifo -id3tag -network
 
 # gentoo-sources
 sys-kernel/gentoo-sources symlink
+sys-kernel/gentoo-kernel savedconfig
 
 # picom
 x11-misc/picom opengl
