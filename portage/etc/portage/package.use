@@ -11,19 +11,15 @@ app-admin/sudo -ssl -sendmail
 media-libs/freetype harfbuzz
 
 # mpv
-media-video/mpv drm -uchardet LUA_SINGLE_TARGET: -* luajit
+media-video/mpv drm -uchardet
 
 # pass
 app-admin/pass dmenu
 
-# lua
-dev-lua/* LUA_TARGETS: -* luajit
-dev-lua/* LUA_SINGLE_TARGET: -* luajit
-
 # nvim
-app-editors/neovim -nvimpager LUA_SINGLE_TARGET: -* luajit
+app-editors/neovim -nvimpager
 
-# Alsa
+# alsa
 media-plugins/alsa-plugins speex
 
 # gpg
@@ -62,3 +58,9 @@ media-gfx/sxiv gif webp
 
 # intel ucode
 sys-firmware/intel-microcode initramfs
+
+# gcc
+sys-devel/gcc pgo lto -fortran
+
+# clang
+sys-devel/clang default-lld default-compiler-rt llvm-libunwind
