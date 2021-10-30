@@ -38,7 +38,6 @@ media-sound/ncmpcpp lto
 media-sound/mpd -cue -audiofile -dbus -curl -fifo -id3tag -network
 
 # gentoo-sources
-sys-kernel/gentoo-sources symlink
 sys-kernel/gentoo-kernel savedconfig
 
 # picom
@@ -62,5 +61,9 @@ sys-firmware/intel-microcode initramfs
 # gcc
 sys-devel/gcc pgo lto -fortran
 
-# clang
-sys-devel/clang default-lld default-compiler-rt llvm-libunwind
+# networking
+net-wireless/iwd -crda -monitor
+net-misc/dhcpcd privsep
+
+# fuse
+sys-fs/fuse -suid
