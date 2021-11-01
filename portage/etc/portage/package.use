@@ -7,7 +7,7 @@ dev-vcs/git -perl -webdav
 # sudo
 app-admin/sudo -ssl -sendmail
 
-# firefox
+# firefox-bin
 media-libs/freetype harfbuzz
 
 # mpv
@@ -67,3 +67,17 @@ net-misc/dhcpcd privsep
 
 # fuse
 sys-fs/fuse -suid
+
+# firefox
+www-client/firefox lto hardened eme-free
+media-libs/libpng apng
+media-libs/libvpx postproc
+
+# clang
+sys-devel/clang default-lld
+
+# telegram-desktop
+net-im/telegram-desktop -gtk -spell -hunspell -dbus
+dev-qt/qtgui jpeg
+media-video/ffmpeg opus
+sys-libs/zlib minizip

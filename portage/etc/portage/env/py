@@ -1,2 +1,1 @@
-# Enable PGO
 EXTRA_ECONF="--enable-optimizations"
