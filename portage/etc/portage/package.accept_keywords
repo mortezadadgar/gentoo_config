@@ -5,6 +5,3 @@ media-sound/mpd ~amd64
 sys-power/intel-undervolt ~amd64
 sys-apps/fd ~amd64
 dev-util/perf ~amd64
-www-client/firefox ~amd64
-dev-libs/nss ~amd64
-dev-libs/nspr ~amd64

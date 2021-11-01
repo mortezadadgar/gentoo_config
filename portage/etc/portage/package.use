@@ -68,11 +68,6 @@ net-misc/dhcpcd privsep
 # fuse
 sys-fs/fuse -suid
 
-# firefox
-www-client/firefox lto hardened eme-free
-media-libs/libpng apng
-media-libs/libvpx postproc
-
 # clang
 sys-devel/clang default-lld
 
@@ -81,3 +76,6 @@ net-im/telegram-desktop -gtk -spell -hunspell -dbus
 dev-qt/qtgui jpeg
 media-video/ffmpeg opus
 sys-libs/zlib minizip
+
+# openrc
+sys-apps/openrc -netifrc
