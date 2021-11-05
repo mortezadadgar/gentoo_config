@@ -35,10 +35,11 @@ net-vpn/tor tor-hardening -server
 # ncmpcpp - mpd
 dev-libs/boost icu
 media-sound/ncmpcpp lto
-media-sound/mpd -cue -audiofile -dbus -curl -fifo -id3tag -network
+media-sound/mpd -cue -audiofile -curl -fifo -id3tag -network
 
-# gentoo-sources
+# kernel
 sys-kernel/gentoo-kernel savedconfig
+sys-kernel/gentoo-sources experimental symlink
 
 # picom
 x11-misc/picom opengl
@@ -72,10 +73,12 @@ sys-fs/fuse -suid
 sys-devel/clang default-lld
 
 # telegram-desktop
-net-im/telegram-desktop -gtk -spell -hunspell -dbus
+net-im/telegram-desktop -gtk -spell -hunspell
 dev-qt/qtgui jpeg
-media-video/ffmpeg opus
 sys-libs/zlib minizip
 
 # openrc
 sys-apps/openrc -netifrc
+
+# ffmpeg - opus needed by tg
+media-video/ffmpeg opus v4l

@@ -1,0 +1,5 @@
+post_pkg_postinst() {
+	genkernel --kernel-config="/etc/portage/savedconfig/sys-kernel/gentoo-sources/.config" all || die
+	eclean-kernel
+	grub-mkconfig -o /boot/grub/grub.cfg
+}
