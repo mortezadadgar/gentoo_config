@@ -5,8 +5,6 @@ if [ "$(id -u)" = "0" ]; then
 	exit 1
 fi
 
-for dir in */; do
-	sudo cp -r "$dir"/* /
-done
+sudo cp -r etc/* /etc || return
 
 echo "Done!"
