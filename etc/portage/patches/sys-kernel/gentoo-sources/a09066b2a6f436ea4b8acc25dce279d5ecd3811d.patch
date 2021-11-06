@@ -1,0 +1,26 @@
+From a09066b2a6f436ea4b8acc25dce279d5ecd3811d Mon Sep 17 00:00:00 2001
+From: Sami Tolvanen <samitolvanen@google.com>
+Date: Wed, 10 Mar 2021 12:33:36 -0800
+Subject: [PATCH] x86, build: Allow CONFIG_CFI_CLANG to be selected
+
+Select ARCH_SUPPORTS_CFI_CLANG to allow CFI to be enabled with
+Clang >= 13.
+
+Link: https://bugs.llvm.org/show_bug.cgi?id=51588
+Signed-off-by: Sami Tolvanen <samitolvanen@google.com>
+---
+ arch/x86/Kconfig | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
+index d9830e7e1060f7..50a8ac2d9955ca 100644
+--- a/arch/x86/Kconfig
++++ b/arch/x86/Kconfig
+@@ -107,6 +107,7 @@ config X86
+ 	select ARCH_SUPPORTS_KMAP_LOCAL_FORCE_MAP	if NR_CPUS <= 4096
+ 	select ARCH_SUPPORTS_LTO_CLANG
+ 	select ARCH_SUPPORTS_LTO_CLANG_THIN
++	select ARCH_SUPPORTS_CFI_CLANG		if X86_64 && CLANG_VERSION >= 130000
+ 	select ARCH_USE_BUILTIN_BSWAP
+ 	select ARCH_USE_MEMTEST
+ 	select ARCH_USE_QUEUED_RWLOCKS

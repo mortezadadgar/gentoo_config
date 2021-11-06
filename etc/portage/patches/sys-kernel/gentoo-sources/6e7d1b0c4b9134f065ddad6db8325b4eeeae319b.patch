@@ -1,0 +1,46 @@
+From 6e7d1b0c4b9134f065ddad6db8325b4eeeae319b Mon Sep 17 00:00:00 2001
+From: Sami Tolvanen <samitolvanen@google.com>
+Date: Fri, 16 Apr 2021 09:01:42 -0700
+Subject: [PATCH] x86, kprobes: Fix optprobe_template_func type mismatch
+
+The optprobe_template_func symbol is defined in inline assembly,
+but it's not marked global, which conflicts with the C declaration
+needed for STACK_FRAME_NON_STANDARD and confuses the compiler when
+CONFIG_CFI_CLANG is enabled.
+
+Marking the symbol global would make the compiler happy, but as the
+compiler also generates a CFI jump table entry for all address-taken
+functions, the jump table ends up containing a jump to the .rodata
+section where optprobe_template_func resides, which results in an
+objtool warning.
+
+Use ASM_STACK_FRAME_NON_STANDARD instead to avoid both issues.
+
+Signed-off-by: Sami Tolvanen <samitolvanen@google.com>
+Reviewed-by: Kees Cook <keescook@chromium.org>
+---
+ arch/x86/kernel/kprobes/opt.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/arch/x86/kernel/kprobes/opt.c b/arch/x86/kernel/kprobes/opt.c
+index 71425ebba98a15..95375ef5deee62 100644
+--- a/arch/x86/kernel/kprobes/opt.c
++++ b/arch/x86/kernel/kprobes/opt.c
+@@ -103,6 +103,7 @@ static void synthesize_set_arg1(kprobe_opcode_t *addr, unsigned long val)
+ asm (
+ 			".pushsection .rodata\n"
+ 			"optprobe_template_func:\n"
++			ASM_STACK_FRAME_NON_STANDARD(optprobe_template_func)
+ 			".global optprobe_template_entry\n"
+ 			"optprobe_template_entry:\n"
+ #ifdef CONFIG_X86_64
+@@ -154,9 +155,6 @@ asm (
+ 			"optprobe_template_end:\n"
+ 			".popsection\n");
+ 
+-void optprobe_template_func(void);
+-STACK_FRAME_NON_STANDARD(optprobe_template_func);
+-
+ #define TMPL_CLAC_IDX \
+ 	((long)optprobe_template_clac - (long)optprobe_template_entry)
+ #define TMPL_MOVE_IDX \

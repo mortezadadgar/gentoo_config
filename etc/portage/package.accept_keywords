@@ -4,7 +4,6 @@ media-sound/mpd ~amd64
 sys-power/intel-undervolt ~amd64
 sys-apps/fd ~amd64
 dev-util/perf ~amd64
-=x11-misc/picom-9999 **
 sys-kernel/gentoo-sources ~amd64
 sys-kernel/gentoo-kernel-bin ~amd64
 virtual/dist-kernel ~amd64

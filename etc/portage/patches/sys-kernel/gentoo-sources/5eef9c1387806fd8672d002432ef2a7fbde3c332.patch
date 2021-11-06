@@ -1,0 +1,29 @@
+From 5eef9c1387806fd8672d002432ef2a7fbde3c332 Mon Sep 17 00:00:00 2001
+From: Sami Tolvanen <samitolvanen@google.com>
+Date: Wed, 15 Jan 2020 15:29:21 -0800
+Subject: [PATCH] x86, module: Ignore __typeid__ relocations
+
+The R_X86_64_8 __typeid__* relocations are for constants the compiler
+generates for indirect call type checking with CONFIG_CFI_CLANG. Ignore
+them when loading modules.
+
+Signed-off-by: Sami Tolvanen <samitolvanen@google.com>
+---
+ arch/x86/kernel/module.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/arch/x86/kernel/module.c b/arch/x86/kernel/module.c
+index 5e9a34b5bd741e..c4aeba237eef41 100644
+--- a/arch/x86/kernel/module.c
++++ b/arch/x86/kernel/module.c
+@@ -197,6 +197,10 @@ static int __apply_relocate_add(Elf64_Shdr *sechdrs,
+ 			val -= (u64)loc;
+ 			write(loc, &val, 8);
+ 			break;
++		case R_X86_64_8:
++			if (!strncmp(strtab + sym->st_name, "__typeid__", 10))
++				break;
++			fallthrough;
+ 		default:
+ 			pr_err("%s: Unknown rela relocation: %llu\n",
+ 			       me->name, ELF64_R_TYPE(rel[i].r_info));
