@@ -69,12 +69,16 @@ net-misc/dhcpcd privsep
 # fuse
 sys-fs/fuse -suid
 
-# clang
-sys-devel/clang default-lld
+# clang/llvm
+sys-devel/clang default-lld abi_x86_32
+sys-devel/llvm abi_x86_32
+sys-libs/zlib abi_x86_32
+dev-libs/libffi abi_x86_32
+sys-libs/ncurses abi_x86_32
 
 # telegram-desktop
-net-im/telegram-desktop -gtk -spell -hunspell
-dev-qt/qtgui jpeg
+net-im/telegram-desktop dbus
+dev-qt/qtgui jpeg dbus
 sys-libs/zlib minizip
 
 # openrc
