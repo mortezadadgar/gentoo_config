@@ -1,6 +1,17 @@
 post_pkg_postinst() {
-    genkernel all \
-	--kernel-config="/etc/portage/savedconfig/sys-kernel/gentoo-sources/.config"
-	eclean-kernel
+	cd /usr/src/linux || die
+
+	make ARCH=x86_64 mrproper || die
+
+	cp -v /etc/kernel/config .config
+
+	make LLVM=1 ARCH=x86_64 olddefconfig || die
+	make -j$(nproc) LLVM=1 ARCH=x86_64 || die
+	make -j$(nproc) LLVM=1 ARCH=x86_64 modules_install || die
+	make ARCH=x86_64 install || die
+
+	dracut --kver ${PV}-gentoo-x86_64 --compress lz4 -fq || die
 	grub-mkconfig -o /boot/grub/grub.cfg
+	rm -v /boot/{config*,System\.map*}
+	cp .config /etc/kernel/config
 }

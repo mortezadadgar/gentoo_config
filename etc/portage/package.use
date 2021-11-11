@@ -86,3 +86,9 @@ sys-apps/openrc -netifrc
 
 # ffmpeg - opus needed by tg
 media-video/ffmpeg opus v4l
+ 
+# haskell
+dev-lang/ghc binary
+
+# intel
+x11-libs/libva-intel-media-driver set-as-default
