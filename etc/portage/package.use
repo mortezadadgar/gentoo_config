@@ -77,7 +77,6 @@ dev-libs/libffi abi_x86_32
 sys-libs/ncurses abi_x86_32
 
 # telegram-desktop
-net-im/telegram-desktop dbus
 dev-qt/qtgui jpeg dbus
 sys-libs/zlib minizip
 
