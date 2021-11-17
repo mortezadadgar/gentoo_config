@@ -38,7 +38,6 @@ media-sound/ncmpcpp lto
 media-sound/mpd -cue -audiofile -curl -fifo -id3tag -network
 
 # kernel
-sys-kernel/gentoo-kernel savedconfig
 sys-kernel/gentoo-sources experimental symlink
 
 # picom
@@ -71,11 +70,6 @@ sys-fs/fuse -suid
 
 # clang/llvm
 sys-devel/clang default-lld
-# sys-devel/clang default-lld abi_x86_32
-# sys-devel/llvm abi_x86_32
-# sys-libs/zlib abi_x86_32
-# dev-libs/libffi abi_x86_32
-# sys-libs/ncurses abi_x86_32
 
 # telegram-desktop
 dev-qt/qtgui jpeg dbus
@@ -87,8 +81,5 @@ sys-apps/openrc -netifrc
 # ffmpeg - opus needed by tg
 media-video/ffmpeg opus v4l
  
-# haskell
-dev-lang/ghc binary
-
 # intel
 x11-libs/libva-intel-media-driver set-as-default
