@@ -10,3 +10,5 @@ virtual/dist-kernel ~amd64
 x11-apps/igt-gpu-tools ~amd64
 x11-libs/libva-intel-media-driver ~amd64
 x11-libs/libva ~amd64
+media-video/mpv ~amd64
+=x11-misc/picom-9999 **
