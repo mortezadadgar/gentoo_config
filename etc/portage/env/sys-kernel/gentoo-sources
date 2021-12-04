@@ -1,17 +1,8 @@
 post_pkg_postinst() {
-	cd /usr/src/linux || die
-
-	make ARCH=x86_64 mrproper || die
-
-	cp -v /etc/kernel/config .config
-
-	make ARCH=x86_64 olddefconfig || die
-	make -j$(nproc) ARCH=x86_64 || die
-	make -j$(nproc) ARCH=x86_64 modules_install || die
-	make ARCH=x86_64 install || die
-
-	dracut --kver ${PV}-gentoo-x86_64 --compress lz4 -fq || die
-	grub-mkconfig -o /boot/grub/grub.cfg
+	genkernel all \
+	--bootloader=grub2 \
+	--kernel-config=/etc/kernel/config || die
 	rm -v /boot/{config*,System\.map*}
-	cp .config /etc/kernel/config
+	cp /usr/src/linux/.config /etc/kernel/config
 }
+

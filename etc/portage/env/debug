@@ -1,0 +1,4 @@
+DEBUG="-g -ggdb"
+CFLAGS="${COMMON_FLAGS} ${NOPLT} ${DEBUG}"
+CXXFLAGS="${CFLAGS}"
+FEATURES="nostrip"

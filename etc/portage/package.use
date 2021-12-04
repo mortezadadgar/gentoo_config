@@ -5,13 +5,10 @@ sys-boot/grub:2 mount
 dev-vcs/git -perl -webdav
 
 # sudo
-app-admin/sudo -ssl -sendmail
+app-admin/sudo offensive -ssl -sendmail
 
 # firefox-bin
 media-libs/freetype harfbuzz
-
-# mpv
-media-video/mpv drm -uchardet
 
 # pass
 app-admin/pass dmenu
@@ -74,12 +71,16 @@ sys-devel/clang default-lld
 # telegram-desktop
 dev-qt/qtgui jpeg dbus
 sys-libs/zlib minizip
+media-video/ffmpeg opus
 
 # openrc
 sys-apps/openrc -netifrc
 
-# ffmpeg - opus needed by tg
-media-video/ffmpeg opus v4l
- 
-# intel
-x11-libs/libva-intel-media-driver set-as-default
+# python
+dev-lang/python pgo lto
+
+# pipewire
+media-video/pipewire pipewire-alsa
+
+# harfbuzz
+media-libs/harfbuzz icu
