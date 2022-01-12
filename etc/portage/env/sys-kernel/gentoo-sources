@@ -3,6 +3,7 @@ post_pkg_postinst() {
 	--bootloader=grub2 \
 	--kernel-config=/etc/kernel/config || die
 	rm -v /boot/{config*,System\.map*}
+	eclean-kernel -n 2
 	cp /usr/src/linux/.config /etc/kernel/config
 }
 

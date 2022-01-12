@@ -84,3 +84,6 @@ media-video/pipewire pipewire-alsa
 
 # harfbuzz
 media-libs/harfbuzz icu
+
+# imagemagick
+media-gfx/imagemagick jpeg webp
