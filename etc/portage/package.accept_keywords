@@ -1,10 +1,14 @@
-app-misc/nnn ~amd64
-app-editors/neovim ~amd64
-media-sound/mpd ~amd64
-sys-power/intel-undervolt ~amd64
-dev-util/perf ~amd64
-sys-kernel/gentoo-kernel-bin ~amd64
-virtual/dist-kernel ~amd64
-sys-kernel/gentoo-sources ~amd64
-x11-apps/igt-gpu-tools ~amd64
-media-video/mpv ~amd64
+app-editors/neovim
+media-sound/mpd
+sys-power/intel-undervolt
+dev-util/perf
+sys-kernel/gentoo-kernel-bin
+virtual/dist-kernel
+sys-kernel/gentoo-sources
+x11-apps/igt-gpu-tools
+media-video/mpv
+app-office/joplin-desktop-bin
+net-im/telegram-desktop-bin
+net-news/sfeed
+dev-lua/luv
+dev-libs/libvterm

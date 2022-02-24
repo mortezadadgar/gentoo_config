@@ -1,4 +1,2 @@
 #!/bin/sh
-LOG=/var/log/cron.log
-echo "*** $(date -R) ***" >> $LOG
-eclean -Cd distfiles >> $LOG
+eclean -Cd distfiles

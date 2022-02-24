@@ -4,14 +4,15 @@ sys-boot/grub:2 mount
 # git
 dev-vcs/git -perl -webdav
 
+# mesa
+media-libs/mesa -llvm
+
 # sudo
 app-admin/sudo offensive -ssl -sendmail
 
-# firefox-bin
-media-libs/freetype harfbuzz
-
 # pass
 app-admin/pass dmenu
+media-gfx/qrencode png
 
 # nvim
 app-editors/neovim -nvimpager
@@ -34,17 +35,11 @@ dev-libs/boost icu
 media-sound/ncmpcpp lto
 media-sound/mpd -cue -audiofile -curl -fifo -id3tag -network
 
-# kernel
-sys-kernel/gentoo-sources experimental symlink
-
 # picom
 x11-misc/picom opengl
 
 # zathura
 app-text/poppler cairo
-
-# nnn
-app-misc/nnn nerd-icons
 
 # xdg-open
 app-text/xmlto text
@@ -55,9 +50,6 @@ media-gfx/sxiv gif webp
 # intel ucode
 sys-firmware/intel-microcode initramfs
 
-# gcc
-sys-devel/gcc pgo lto -fortran
-
 # networking
 net-wireless/iwd -crda -monitor
 net-misc/dhcpcd privsep
@@ -65,22 +57,11 @@ net-misc/dhcpcd privsep
 # fuse
 sys-fs/fuse -suid
 
-# clang/llvm
-sys-devel/clang default-lld
-
-# telegram-desktop
-dev-qt/qtgui jpeg dbus
-sys-libs/zlib minizip
-media-video/ffmpeg opus
-
 # openrc
 sys-apps/openrc -netifrc
 
 # python
 dev-lang/python pgo lto
-
-# pipewire
-media-video/pipewire pipewire-alsa
 
 # harfbuzz
 media-libs/harfbuzz icu
