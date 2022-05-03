@@ -63,8 +63,5 @@ sys-apps/openrc -netifrc
 # python
 dev-lang/python pgo lto
 
-# harfbuzz
-media-libs/harfbuzz icu
-
 # imagemagick
 media-gfx/imagemagick jpeg webp
