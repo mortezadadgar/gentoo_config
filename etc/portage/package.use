@@ -65,3 +65,6 @@ dev-lang/python pgo lto
 
 # imagemagick
 media-gfx/imagemagick jpeg webp
+
+# gentoo-sources
+sys-kernel/gentoo-sources symlink

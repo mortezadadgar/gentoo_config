@@ -1,0 +1,5 @@
+post_pkg_postinst() {
+	genkernel all || die
+	eclean-kernel -n 1 || die
+	rm /boot/System.map-* /boot/config-*
+}
