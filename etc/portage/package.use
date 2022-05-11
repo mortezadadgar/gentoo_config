@@ -68,3 +68,9 @@ media-gfx/imagemagick jpeg webp
 
 # gentoo-sources
 sys-kernel/gentoo-sources symlink
+
+# postgresql
+dev-db/postgresql doc
+
+# qbittorrent
+x11-libs/libxkbcommon X
