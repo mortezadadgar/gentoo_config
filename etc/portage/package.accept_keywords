@@ -1,11 +1,12 @@
 app-editors/neovim
 dev-lua/luv
+dev-lang/luajit
 media-sound/mpd
 sys-power/intel-undervolt
-sys-kernel/gentoo-kernel-bin
-virtual/dist-kernel
 x11-apps/igt-gpu-tools
 media-video/mpv
 net-im/telegram-desktop-bin
 net-news/sfeed
-sys-auth/polkit
+sys-kernel/gentoo-sources
+sys-kernel/gentoo-kernel-bin
+virtual/dist-kernel

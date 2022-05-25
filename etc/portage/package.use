@@ -65,3 +65,6 @@ dev-lang/python pgo lto
 
 # imagemagick
 media-gfx/imagemagick jpeg webp
+
+# qbittorrent
+x11-libs/libxkbcommon X
