@@ -4,9 +4,7 @@ dev-lang/luajit
 media-sound/mpd
 sys-power/intel-undervolt
 x11-apps/igt-gpu-tools
-media-video/mpv
 net-im/telegram-desktop-bin
 net-news/sfeed
-sys-kernel/gentoo-sources
 sys-kernel/gentoo-kernel-bin
 virtual/dist-kernel

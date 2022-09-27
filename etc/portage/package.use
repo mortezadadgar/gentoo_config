@@ -33,7 +33,7 @@ net-vpn/tor tor-hardening -server
 # ncmpcpp - mpd
 dev-libs/boost icu
 media-sound/ncmpcpp lto
-media-sound/mpd -cue -audiofile -curl -fifo -id3tag -network
+media-sound/mpd -cue -audiofile -curl -fifo -network
 
 # picom
 x11-misc/picom opengl
@@ -68,3 +68,9 @@ media-gfx/imagemagick jpeg webp
 
 # qbittorrent
 x11-libs/libxkbcommon X
+
+# ffmpeg
+media-video/ffmpeg X v4l x264
+
+# dunst
+x11-libs/pango X
