@@ -1,0 +1,3 @@
+GRUB_DISTRIBUTOR="Gentoo"
+GRUB_DISABLE_OS_PROBER=no
+GRUB_CMDLINE_LINUX="quiet numa=off init_on_alloc=1"

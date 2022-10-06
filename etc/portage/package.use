@@ -61,16 +61,13 @@ sys-fs/fuse -suid
 sys-apps/openrc -netifrc
 
 # python
-dev-lang/python pgo lto
+dev-lang/python pgo lto hardened
 
 # imagemagick
 media-gfx/imagemagick jpeg webp
 
-# qbittorrent
-x11-libs/libxkbcommon X
-
 # ffmpeg
-media-video/ffmpeg X v4l x264
+media-video/ffmpeg v4l x264
 
-# dunst
-x11-libs/pango X
+# node
+net-libs/nodejs lto
