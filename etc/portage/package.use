@@ -8,7 +8,7 @@ dev-vcs/git -perl -webdav
 media-libs/mesa -llvm
 
 # sudo
-app-admin/sudo offensive -ssl -sendmail
+app-admin/sudo -ssl -sendmail
 
 # pass
 app-admin/pass dmenu
@@ -32,8 +32,8 @@ net-vpn/tor tor-hardening -server
 
 # ncmpcpp - mpd
 dev-libs/boost icu
-media-sound/ncmpcpp lto
-media-sound/mpd -cue -audiofile -curl -fifo -network
+media-sound/ncmpcpp lto visualizer
+media-sound/mpd -curl -network
 
 # picom
 x11-misc/picom opengl
@@ -43,9 +43,6 @@ app-text/poppler cairo
 
 # xdg-open
 app-text/xmlto text
-
-# sxiv
-media-gfx/sxiv gif webp
 
 # intel ucode
 sys-firmware/intel-microcode initramfs
@@ -64,10 +61,19 @@ sys-apps/openrc -netifrc
 dev-lang/python pgo lto hardened
 
 # imagemagick
-media-gfx/imagemagick jpeg webp
+media-gfx/imagemagick jpeg webp svg xml
 
 # ffmpeg
 media-video/ffmpeg v4l x264
 
 # node
 net-libs/nodejs lto
+
+# imv
+media-gfx/imv gif jpeg png svg tiff
+
+# nextcloud
+dev-lang/php zip xmlreader curl pdo sqlite intl truetype xmlwriter gd fpm
+media-gfx/imagemagick -openmp
+app-eselect/eselect-php fpm
+app-misc/mime-types nginx

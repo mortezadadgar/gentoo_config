@@ -1,2 +1,2 @@
-PORTAGE_TMPDIR="/run/media/sda5/gentoo/tmp"
+PORTAGE_TMPDIR="/run/media/sda4/gentoo/tmp"
 FEATURES="-xattr"
