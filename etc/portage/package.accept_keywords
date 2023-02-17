@@ -2,7 +2,6 @@ app-editors/neovim
 dev-lua/luv
 dev-lang/luajit
 dev-libs/libvterm
-media-sound/mpd
 sys-power/intel-undervolt
 x11-apps/igt-gpu-tools
 net-im/telegram-desktop-bin

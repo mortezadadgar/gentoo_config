@@ -1,0 +1,19 @@
+#
+# Minimal torrc so tor will work out of the box
+#
+User tor
+PIDFile /run/tor/tor.pid
+Log notice syslog
+DataDirectory /var/lib/tor/data
+HardwareAccel 1
+ReducedConnectionPadding 1
+CircuitPadding 1
+ReducedCircuitPadding 1
+CircuitStreamTimeout 60
+HTTPTunnelPort 127.0.0.1:8118
+NumCPUs 2
+Sandbox 1
+
+# # Bridges
+# UseBridges 1
+# ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy

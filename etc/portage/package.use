@@ -1,4 +1,4 @@
-# grub -- needed for os-prober
+# grub
 sys-boot/grub:2 mount
 
 # git
@@ -72,8 +72,5 @@ net-libs/nodejs lto
 # imv
 media-gfx/imv gif jpeg png svg tiff
 
-# nextcloud
-dev-lang/php zip xmlreader curl pdo sqlite intl truetype xmlwriter gd fpm
-media-gfx/imagemagick -openmp
-app-eselect/eselect-php fpm
-app-misc/mime-types nginx
+# gcc
+sys-devel/gcc jit
