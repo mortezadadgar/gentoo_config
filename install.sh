@@ -5,6 +5,6 @@ if [ "$(id -u)" = "0" ]; then
 	exit 1
 fi
 
-sudo cp -r etc/* /etc || return
+sudo cp -vr etc/* /etc || return
 
 echo "Done!"

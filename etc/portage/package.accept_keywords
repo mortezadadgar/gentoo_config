@@ -8,3 +8,5 @@ net-im/telegram-desktop-bin
 net-news/sfeed
 sys-kernel/gentoo-kernel-bin
 virtual/dist-kernel
+x11-base/xorg-server **
+x11-base/xorg-drivers **

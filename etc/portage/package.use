@@ -7,21 +7,12 @@ dev-vcs/git -perl -webdav
 # mesa
 media-libs/mesa -llvm
 
-# sudo
-app-admin/sudo -ssl -sendmail
-
 # pass
 app-admin/pass dmenu
 media-gfx/qrencode png
 
-# nvim
-app-editors/neovim -nvimpager
-
 # alsa
 media-plugins/alsa-plugins speex
-
-# gpg
-app-crypt/gnupg -smartcard
 
 # pinentry
 app-crypt/pinentry gtk -ncurses
@@ -32,11 +23,8 @@ net-vpn/tor tor-hardening -server
 
 # ncmpcpp - mpd
 dev-libs/boost icu
-media-sound/ncmpcpp lto visualizer
+media-sound/ncmpcpp visualizer
 media-sound/mpd -curl -network
-
-# picom
-x11-misc/picom opengl
 
 # zathura
 app-text/poppler cairo
@@ -58,7 +46,7 @@ sys-fs/fuse -suid
 sys-apps/openrc -netifrc
 
 # python
-dev-lang/python pgo lto hardened
+dev-lang/python pgo
 
 # imagemagick
 media-gfx/imagemagick jpeg webp svg xml
@@ -66,11 +54,8 @@ media-gfx/imagemagick jpeg webp svg xml
 # ffmpeg
 media-video/ffmpeg v4l x264
 
-# node
-net-libs/nodejs lto
-
 # imv
 media-gfx/imv gif jpeg png svg tiff
 
-# gcc
-sys-devel/gcc jit
+# doas
+app-admin/doas persist
