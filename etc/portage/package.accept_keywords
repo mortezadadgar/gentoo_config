@@ -1,4 +1,5 @@
 app-editors/neovim
+dev-libs/tree-sitter
 dev-lua/luv
 dev-lang/luajit
 dev-libs/libvterm
@@ -8,5 +9,6 @@ net-im/telegram-desktop-bin
 net-news/sfeed
 sys-kernel/gentoo-kernel-bin
 virtual/dist-kernel
-x11-base/xorg-server **
-x11-base/xorg-drivers **
+sys-kernel/gentoo-sources
+x11-misc/picom
+net-proxy/snowflake

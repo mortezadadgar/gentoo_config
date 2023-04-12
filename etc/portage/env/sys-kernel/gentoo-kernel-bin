@@ -1,0 +1,5 @@
+post_pkg_postinst() {
+	grub-mkconfig -o /boot/grub/grub.cfg || die
+	rm {config,System}*
+	eclean-kernel -n 1 || die
+}

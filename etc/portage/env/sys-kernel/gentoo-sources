@@ -1,0 +1,5 @@
+post_pkg_postinst() {
+	genkernel all || die
+	rm {config,System}*
+	eclean-kernel -n 1
+}

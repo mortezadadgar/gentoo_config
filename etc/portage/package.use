@@ -4,6 +4,9 @@ sys-boot/grub:2 mount
 # git
 dev-vcs/git -perl -webdav
 
+# sudo
+app-admin/sudo -sendmail
+
 # mesa
 media-libs/mesa -llvm
 
@@ -57,5 +60,11 @@ media-video/ffmpeg v4l x264
 # imv
 media-gfx/imv gif jpeg png svg tiff
 
-# doas
-app-admin/doas persist
+# picom
+x11-misc/picom opengl
+
+# gcc
+sys-devel/gcc pgo
+
+# kernel
+sys-kernel/gentoo-sources symlink
