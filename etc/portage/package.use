@@ -18,8 +18,8 @@ media-gfx/qrencode png
 media-plugins/alsa-plugins speex
 
 # pinentry
-app-crypt/pinentry gtk -ncurses
-app-crypt/gcr gtk
+#app-crypt/pinentry gtk -ncurses
+#app-crypt/gcr gtk
 
 # tor
 net-vpn/tor tor-hardening -server
@@ -64,7 +64,13 @@ media-gfx/imv gif jpeg png svg tiff
 x11-misc/picom opengl
 
 # gcc
-sys-devel/gcc pgo
+sys-devel/gcc -lto
+
+# libva - fixes circular dependencies on fresh install
+media-libs/libva -X
 
 # kernel
 sys-kernel/gentoo-sources symlink
+
+# doas
+app-admin/doas persist
