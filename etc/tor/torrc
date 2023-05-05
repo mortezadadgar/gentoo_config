@@ -9,11 +9,12 @@ HardwareAccel 1
 ReducedConnectionPadding 1
 CircuitPadding 1
 ReducedCircuitPadding 1
-CircuitStreamTimeout 60
 HTTPTunnelPort 127.0.0.1:8118
-NumCPUs 2
-Sandbox 1
 
-# # Bridges
-# UseBridges 1
-# ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy
+# Bridges
+UseBridges 1
+ClientTransportPlugin snowflake exec /usr/bin/snowflake-client \
+-url https://snowflake-broker.torproject.net.global.prod.fastly.net/ \
+-front cdn.sstatic.net \
+-ice stun:stun.voip.blackberry.com:3478,stun:stun.antisip.com:3478,stun:stun.bluesip.net:3478,stun:stun.dus.net:3478,stun:stun.epygi.com:3478,stun:stun.sonetel.com:3478,stun:stun.sonetel.net:3478,stun:stun.uls.co.za:3478,stun:stun.voipgate.com:3478,stun:stun.voys.nl:3478
+Bridge snowflake 192.0.2.3:1

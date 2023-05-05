@@ -12,3 +12,5 @@ virtual/dist-kernel
 sys-kernel/gentoo-sources
 x11-misc/picom
 net-proxy/snowflake
+x11-base/xorg-server **
+x11-base/xorg-drivers **
