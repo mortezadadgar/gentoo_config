@@ -40,9 +40,6 @@ sys-firmware/intel-microcode initramfs
 net-wireless/iwd -crda -monitor
 net-misc/dhcpcd privsep
 
-# fuse
-sys-fs/fuse -suid
-
 # openrc
 sys-apps/openrc -netifrc
 
@@ -61,9 +58,11 @@ media-gfx/imv gif jpeg png svg tiff
 # gcc
 sys-devel/gcc -lto
 
+# doas
+app-admin/doas persist
+
 # dash
 app-alternatives/sh dash -bash
 
-# -minimal
-x11-base/xorg-server -minimal
-sys-libs/ncurses -minimal
+# perl
+dev-lang/perl minimal
