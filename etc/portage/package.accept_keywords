@@ -1,16 +1,14 @@
 app-editors/neovim
 dev-libs/tree-sitter
-dev-lua/luv
 dev-lang/luajit
 dev-libs/libvterm
 sys-power/intel-undervolt
 x11-apps/igt-gpu-tools
 net-im/telegram-desktop-bin
-net-news/sfeed
 sys-kernel/gentoo-kernel-bin
 virtual/dist-kernel
 sys-kernel/gentoo-sources
-x11-misc/picom
 net-proxy/snowflake
+x11-misc/sxcs
 x11-base/xorg-server **
 x11-base/xorg-drivers **

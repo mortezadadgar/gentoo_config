@@ -25,7 +25,6 @@ net-vpn/tor tor-hardening -server
 
 # ncmpcpp - mpd
 dev-libs/boost icu
-media-sound/ncmpcpp visualizer
 media-sound/mpd -curl -network
 
 # zathura
@@ -59,17 +58,12 @@ media-video/ffmpeg v4l x264
 # imv
 media-gfx/imv gif jpeg png svg tiff
 
-# picom
-x11-misc/picom opengl
-
 # gcc
 sys-devel/gcc -lto
 
-# kernel
-sys-kernel/gentoo-sources symlink
-
-# doas
-app-admin/doas persist
-
 # dash
 app-alternatives/sh dash -bash
+
+# -minimal
+x11-base/xorg-server -minimal
+sys-libs/ncurses -minimal
