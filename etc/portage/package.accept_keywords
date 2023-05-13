@@ -14,3 +14,4 @@ x11-base/xorg-server **
 x11-base/xorg-drivers **
 app-benchmarks/stress-ng
 app-misc/dragon
+media-gfx/nsxiv

@@ -66,3 +66,9 @@ app-alternatives/sh dash -bash
 
 # perl
 dev-lang/perl minimal
+
+# Inkspace
+net-libs/glib-networking -gnome -libproxy
+
+# nsxiv
+media-libs/imlib2 svg
