@@ -1,6 +1,3 @@
-# grub
-sys-boot/grub:2 mount
-
 # git
 dev-vcs/git -perl -webdav
 
@@ -38,7 +35,7 @@ sys-firmware/intel-microcode initramfs
 
 # networking
 net-wireless/iwd -crda -monitor
-net-misc/dhcpcd privsep
+net-misc/dhcpcd privsep -ipv6
 
 # openrc
 sys-apps/openrc -netifrc
@@ -50,7 +47,7 @@ dev-lang/python pgo
 media-gfx/imagemagick jpeg webp svg xml
 
 # ffmpeg
-media-video/ffmpeg v4l x264
+media-video/ffmpeg v4l x264 mp3 webm
 
 # imv
 media-gfx/imv gif jpeg png svg tiff
