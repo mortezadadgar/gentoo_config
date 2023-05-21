@@ -1,10 +1,3 @@
-# PCI Runtime Power Management
-SUBSYSTEM=="pci", ATTR{power/control}="auto"
-SUBSYSTEM=="pci", ATTR{device}=="0xb723", ATTR{power/control}="on"
-
-# Unload nvidia-gc
+# Unload nvidia graphic card
 SUBSYSTEM=="pci", KERNEL=="0000:01:00.0", ATTR{remove}="1"
 SUBSYSTEM=="pci", KERNEL=="0000:01:00.1", ATTR{remove}="1"
-
-# USB autosuspend
-ACTION=="add", SUBSYSTEM=="usb", ATTR{power/control}="auto"
