@@ -10,8 +10,13 @@ virtual/dist-kernel
 sys-kernel/gentoo-sources
 net-proxy/snowflake
 x11-misc/sxcs
-x11-base/xorg-server **
-x11-base/xorg-drivers **
+#x11-base/xorg-server **
+#x11-base/xorg-drivers **
 app-benchmarks/stress-ng
 app-misc/dragon
 media-gfx/nsxiv
+www-client/firefox
+dev-libs/nss
+net-proxy/v2ray-core
+dev-libs/v2ray-geoip-bin
+dev-libs/v2ray-domain-list-community-bin

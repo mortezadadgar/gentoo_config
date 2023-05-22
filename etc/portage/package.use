@@ -15,7 +15,8 @@ media-gfx/qrencode png
 media-plugins/alsa-plugins speex
 
 # pinentry
-app-crypt/pinentry gtk -ncurses
+# app-crypt/pinentry gtk -ncurses
+# app-crypt/gcr gtk
 
 # tor
 net-vpn/tor tor-hardening -server
@@ -26,9 +27,6 @@ media-sound/mpd -curl -network
 
 # zathura
 app-text/poppler cairo
-
-# xdg-open
-app-text/xmlto text
 
 # intel ucode
 sys-firmware/intel-microcode initramfs
@@ -69,3 +67,14 @@ net-libs/glib-networking -gnome -libproxy
 
 # nsxiv
 media-libs/imlib2 svg
+
+# firefox
+# media-libs/libpng apng
+# www-client/firefox eme-free system-png -telemetry -gmp-autoupdate
+# media-libs/libvpx postproc
+
+# gcc
+sys-devel/gcc default-stack-clash-protection default-znow -lto
+
+# picom
+x11-misc/picom opengl
