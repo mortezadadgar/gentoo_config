@@ -1,4 +1,0 @@
-# configure zswap
-echo lz4 > /sys/module/zswap/parameters/compressor
-echo 1 > /sys/module/zswap/parameters/enabled
-echo z3fold > /sys/module/zswap/parameters/zpool
