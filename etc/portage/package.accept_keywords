@@ -17,6 +17,8 @@ app-misc/dragon
 media-gfx/nsxiv
 www-client/firefox
 dev-libs/nss
+sys-kernel/dracut
 net-proxy/v2ray-core
 dev-libs/v2ray-geoip-bin
 dev-libs/v2ray-domain-list-community-bin
+net-misc/dhcpcd

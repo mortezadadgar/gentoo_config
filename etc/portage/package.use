@@ -25,6 +25,9 @@ net-vpn/tor tor-hardening -server
 dev-libs/boost icu
 media-sound/mpd -curl -network
 
+# dunst
+app-text/xmlto text
+
 # zathura
 app-text/poppler cairo
 
@@ -68,13 +71,14 @@ net-libs/glib-networking -gnome -libproxy
 # nsxiv
 media-libs/imlib2 svg
 
-# firefox
-# media-libs/libpng apng
-# www-client/firefox eme-free system-png -telemetry -gmp-autoupdate
-# media-libs/libvpx postproc
-
-# gcc
-sys-devel/gcc default-stack-clash-protection default-znow -lto
-
 # picom
 x11-misc/picom opengl
+
+# smartmontools
+sys-apps/smartmontools -caps -daemon
+
+# nodejs
+net-libs/nodejs -lto
+
+# btrfs
+sys-fs/btrfs-progs -convert -man
