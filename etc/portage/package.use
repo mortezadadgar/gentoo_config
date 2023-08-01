@@ -1,5 +1,5 @@
 # git
-dev-vcs/git -perl -webdav
+dev-vcs/git -webdav
 
 # sudo
 app-admin/sudo -sendmail
@@ -15,15 +15,15 @@ media-gfx/qrencode png
 media-plugins/alsa-plugins speex
 
 # pinentry
-# app-crypt/pinentry gtk -ncurses
-# app-crypt/gcr gtk
+app-crypt/pinentry gtk -ncurses
+app-crypt/gcr gtk
 
 # tor
 net-vpn/tor tor-hardening -server
 
 # ncmpcpp - mpd
 dev-libs/boost icu
-media-sound/mpd -curl -network
+media-sound/mpd alsa -curl -network
 
 # dunst
 app-text/xmlto text
@@ -50,11 +50,8 @@ media-gfx/imagemagick jpeg webp svg xml
 # ffmpeg
 media-video/ffmpeg v4l x264 mp3 webm
 
-# imv
-media-gfx/imv gif jpeg png svg tiff
-
 # gcc
-sys-devel/gcc -lto
+sys-devel/gcc jit pgo lto
 
 # doas
 app-admin/doas persist
@@ -82,3 +79,44 @@ net-libs/nodejs -lto
 
 # btrfs
 sys-fs/btrfs-progs -convert -man
+
+# cups
+app-text/ghostscript-gpl cups
+net-print/cups-filters -foomatic -postscript
+
+# audio
+media-video/pipewire sound-server
+
+# ungoogled-chromium-bin
+sys-libs/zlib minizip
+dev-libs/libxml2 icu
+
+# libreoffice
+dev-libs/xmlsec nss
+
+# xdg-desktop-portal
+sys-apps/xdg-desktop-portal screencast
+sys-fs/fuse suid
+
+# swaybg
+gui-apps/swaybg gdk-pixbuf
+x11-libs/gdk-pixbuf jpeg
+
+# harfbuzz
+media-libs/harfbuzz icu
+
+# X
+media-libs/libva X
+x11-libs/pango X
+
+# pambase
+sys-auth/pambase -passwdqc
+
+# gdb
+sys-devel/gdb xxhash source-highlight
+
+# grim
+gui-apps/grim jpeg
+
+# wlroots
+gui-libs/wlroots X

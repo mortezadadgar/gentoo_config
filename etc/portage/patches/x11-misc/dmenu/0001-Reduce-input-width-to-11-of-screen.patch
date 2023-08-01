@@ -1,0 +1,26 @@
+From 5c81d44c06f1a64d64b52aeca00e2c8617f74320 Mon Sep 17 00:00:00 2001
+From: mortezadadgar <mortezadadgar97@gmail.com>
+Date: Sun, 21 May 2023 22:23:08 +0330
+Subject: [PATCH 1/2] Reduce input width to ~11% of screen
+
+Signed-off-by: mortezadadgar <mortezadadgar97@gmail.com>
+---
+ dmenu.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/dmenu.c b/dmenu.c
+index 62f1089..be25c62 100644
+--- a/dmenu.c
++++ b/dmenu.c
+@@ -678,7 +678,7 @@ setup(void)
+ 		mw = wa.width;
+ 	}
+ 	promptw = (prompt && *prompt) ? TEXTW(prompt) - lrpad / 4 : 0;
+-	inputw = mw / 3; /* input width: ~33% of monitor width */
++	inputw = mw / 10; /* input width: ~11% of monitor width */
+ 	match();
+ 
+ 	/* create menu window */
+-- 
+2.41.0
+

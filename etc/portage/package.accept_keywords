@@ -10,15 +10,25 @@ virtual/dist-kernel
 sys-kernel/gentoo-sources
 net-proxy/snowflake
 x11-misc/sxcs
-#x11-base/xorg-server **
-#x11-base/xorg-drivers **
 app-benchmarks/stress-ng
 app-misc/dragon
 media-gfx/nsxiv
 www-client/firefox
 dev-libs/nss
-sys-kernel/dracut
+www-client/ungoogled-chromium-bin
 net-proxy/v2ray-core
 dev-libs/v2ray-geoip-bin
 dev-libs/v2ray-domain-list-community-bin
+media-plugins/alsaequal
+net-news/newsboat
+x11-terms/wezterm
+app-office/obsidian
+gui-apps/foot
+dev-libs/tllist
+gui-libs/xdg-desktop-portal-wlr
 net-misc/dhcpcd
+dev-libs/bemenu
+gui-apps/waylock
+dev-lang/zig-bin
+app-eselect/eselect-zig
+gui-apps/wlr-randr
