@@ -27,6 +27,7 @@ media-sound/mpd alsa -curl -network
 
 # dunst
 app-text/xmlto text
+x11-libs/pango X
 
 # zathura
 app-text/poppler cairo
@@ -56,7 +57,7 @@ sys-devel/gcc jit pgo lto
 # doas
 app-admin/doas persist
 
-# dash
+# app-alternatives
 app-alternatives/sh dash -bash
 
 # perl
@@ -85,7 +86,7 @@ app-text/ghostscript-gpl cups
 net-print/cups-filters -foomatic -postscript
 
 # audio
-media-video/pipewire sound-server
+media-video/pipewire echo-cancel sound-server
 
 # ungoogled-chromium-bin
 sys-libs/zlib minizip
@@ -94,20 +95,8 @@ dev-libs/libxml2 icu
 # libreoffice
 dev-libs/xmlsec nss
 
-# xdg-desktop-portal
-sys-apps/xdg-desktop-portal screencast
-sys-fs/fuse suid
-
-# swaybg
-gui-apps/swaybg gdk-pixbuf
-x11-libs/gdk-pixbuf jpeg
-
 # harfbuzz
 media-libs/harfbuzz icu
-
-# X
-media-libs/libva X
-x11-libs/pango X
 
 # pambase
 sys-auth/pambase -passwdqc
@@ -115,8 +104,45 @@ sys-auth/pambase -passwdqc
 # gdb
 sys-devel/gdb xxhash source-highlight
 
-# grim
-gui-apps/grim jpeg
+# X
+sys-apps/dbus X
+x11-libs/libxkbcommon X
 
-# wlroots
+# mpv
+media-libs/libva X
+
+# ghc
+dev-lang/ghc profile -doc
+dev-haskell/cabal doc hscolour
+
+# virt-manager
+app-emulation/virt-manager gui
+app-emulation/libvirt
+net-misc/spice-gtk usbredir
+app-emulation/qemu usbredir
+net-dns/dnsmasq script
+net-libs/gnutls tools pkcs11
+app-emulation/qemu spice
+
+# clang
+sys-devel/clang-common default-lld
+
+# wayland
+dev-qt/qtgui egl eglfs
+dev-qt/qtbase egl
 gui-libs/wlroots X
+
+app-doc/doxygen dot
+media-libs/gd truetype fontconfig
+dev-libs/wayland doc
+
+# swaybg
+gui-apps/swaybg gdk-pixbuf
+x11-libs/gdk-pixbuf jpeg
+
+# xdg-desktop-portal
+sys-fs/fuse suid
+sys-apps/xdg-desktop-portal screencast
+
+# neomutt
+mail-client/neomutt sasl

@@ -30,8 +30,7 @@ location = /var/db/repos/ROKO__
 sync-type = git
 sync-uri = https://github.com/gentoo-mirror/ROKO__.git
 
-
-[wayland-desktop]
-location = /var/db/repos/wayland-desktop
+[libressl]
+location = /var/db/repos/libressl
 sync-type = git
-sync-uri = https://github.com/gentoo-mirror/wayland-desktop.git
+sync-uri = https://github.com/gentoo-mirror/libressl.git
