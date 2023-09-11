@@ -5,8 +5,8 @@ dev-libs/libvterm
 sys-power/intel-undervolt
 x11-apps/igt-gpu-tools
 net-im/telegram-desktop-bin
-sys-kernel/gentoo-kernel-bin
-virtual/dist-kernel
+#sys-kernel/gentoo-kernel-bin
+#virtual/dist-kernel
 sys-kernel/gentoo-sources
 net-proxy/snowflake
 x11-misc/sxcs
@@ -28,3 +28,6 @@ gui-apps/wlr-randr
 sys-devel/mold
 sys-devel/gcc
 mail-client/neomutt
+sys-apps/drm_info
+app-office/qownnotes
+gui-apps/tofi

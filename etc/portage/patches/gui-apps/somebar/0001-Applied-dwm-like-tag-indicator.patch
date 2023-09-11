@@ -1,0 +1,41 @@
+From 1d153c638d41356f4f1118ba17267e08d58facaf Mon Sep 17 00:00:00 2001
+From: mortezadadgar <mortezadadgar97@gmail.com>
+Date: Sun, 30 Jul 2023 23:46:51 +0330
+Subject: [PATCH 1/4] Applied dwm-like-tag-indicator
+
+Signed-off-by: mortezadadgar <mortezadadgar97@gmail.com>
+---
+ src/bar.cpp | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+
+diff --git a/src/bar.cpp b/src/bar.cpp
+index 507ce62..4fda8b0 100644
+--- a/src/bar.cpp
++++ b/src/bar.cpp
+@@ -245,12 +245,17 @@ void Bar::renderTags()
+ 			tag.state & TagState::Active ? colorActive : colorInactive,
+ 			tag.state & TagState::Urgent);
+ 		renderComponent(tag.component);
+-		auto indicators = std::min(tag.numClients, static_cast<int>(_bufs->height/2));
+-		for (auto ind = 0; ind < indicators; ind++) {
+-			auto w = ind == tag.focusedClient ? 7 : 1;
+-			cairo_move_to(_painter, tag.component.x, ind*2+0.5);
+-			cairo_rel_line_to(_painter, w, 0);
+-			cairo_close_path(_painter);
++
++		if(!tag.numClients)
++			continue;
++
++		int s = barfont.height / 9;
++		int w = barfont.height / 6 + 2;
++		if (tag.focusedClient != -1) {
++			cairo_rectangle(_painter, tag.component.x + s, s, w, w);
++			cairo_fill(_painter);
++		} else {
++			cairo_rectangle(_painter, (double)(tag.component.x + s) + 0.5, (double)(s) + 0.5, w, w);
+ 			cairo_set_line_width(_painter, 1);
+ 			cairo_stroke(_painter);
+ 		}
+-- 
+2.41.0
+
