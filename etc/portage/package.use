@@ -27,10 +27,6 @@ media-sound/mpd alsa -curl -network
 
 # dunst
 app-text/xmlto text
-x11-libs/pango X
-
-# zathura
-app-text/poppler cairo
 
 # intel ucode
 sys-firmware/intel-microcode initramfs
@@ -42,20 +38,11 @@ net-misc/dhcpcd privsep -ipv6
 # openrc
 sys-apps/openrc -netifrc
 
-# python
-dev-lang/python pgo
-
 # imagemagick
 media-gfx/imagemagick jpeg webp svg xml
 
 # ffmpeg
 media-video/ffmpeg v4l x264 mp3 webm
-
-# gcc
-sys-devel/gcc jit pgo lto
-
-# doas
-app-admin/doas persist
 
 # app-alternatives
 app-alternatives/sh dash -bash
@@ -63,20 +50,13 @@ app-alternatives/sh dash -bash
 # perl
 dev-lang/perl minimal
 
+dev-lang/python pgo
+
 # Inkspace
 net-libs/glib-networking -gnome -libproxy
 
 # nsxiv
 media-libs/imlib2 svg
-
-# picom
-x11-misc/picom opengl
-
-# smartmontools
-sys-apps/smartmontools -caps -daemon
-
-# nodejs
-net-libs/nodejs -lto
 
 # btrfs
 sys-fs/btrfs-progs -convert -man
@@ -85,18 +65,9 @@ sys-fs/btrfs-progs -convert -man
 app-text/ghostscript-gpl cups
 net-print/cups-filters -foomatic -postscript
 
-# audio
-media-video/pipewire echo-cancel sound-server
-
 # ungoogled-chromium-bin
 sys-libs/zlib minizip
 dev-libs/libxml2 icu
-
-# libreoffice
-dev-libs/xmlsec nss
-
-# harfbuzz
-media-libs/harfbuzz icu
 
 # pambase
 sys-auth/pambase -passwdqc
@@ -104,44 +75,31 @@ sys-auth/pambase -passwdqc
 # gdb
 sys-devel/gdb xxhash source-highlight
 
-# ghc
-dev-lang/ghc profile -doc
-dev-haskell/cabal doc hscolour
+# gcc
+sys-devel/gcc -lto
 
-# virt-manager
-app-emulation/virt-manager gui
-app-emulation/libvirt
-net-dns/dnsmasq script
-net-libs/gnutls tools pkcs11
-app-emulation/qemu spice
+# mupdf
+app-text/mupdf -drm -javascript
+app-text/zathura-pdf-mupdf -javascript
 
-# clang
-sys-devel/clang-common default-lld
-
-# wayland
-dev-qt/qtgui egl eglfs
-dev-qt/qtbase egl
-gui-libs/wlroots X
-
-# less X
-media-video/mpv -X
-dev-qt/qtgui -X
-dev-qt/qtwidgets -X
-
-# swaybg
-gui-apps/swaybg gdk-pixbuf
-x11-libs/gdk-pixbuf jpeg
-
-# xdg-desktop-portal
-sys-fs/fuse suid
-sys-apps/xdg-desktop-portal screencast
-
-# neomutt
-mail-client/neomutt sasl
+# firefox
+www-client/firefox eme-free dbus openh264 system-png -telemetry
+media-libs/libvpx postproc
+media-libs/libpng apng
 
 # telegram-desktop
-net-im/telegram-desktop -X -fonts
-media-libs/tg_owt -X
-media-video/ffmpeg opus vpx
+media-video/ffmpeg vpx opus
 dev-qt/qtgui dbus jpeg
 dev-qt/qtcore icu
+
+# gimp
+app-text/poppler cairo
+media-libs/gegl cairo
+
+# pipewire
+media-video/pipewire echo-cancel sound-server -X
+media-libs/libsndfile minimal
+
+# less X
+sys-apps/groff -X
+sys-apps/dbus -X

@@ -1,2 +1,3 @@
 FEATURES="ccache"
 CCACHE_DIR="/var/cache/ccache"
+CCACHE_UMASK="0002"

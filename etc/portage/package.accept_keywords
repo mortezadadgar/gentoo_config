@@ -5,8 +5,8 @@ dev-libs/libvterm
 sys-power/intel-undervolt
 x11-apps/igt-gpu-tools
 net-im/telegram-desktop-bin
-#sys-kernel/gentoo-kernel-bin
-#virtual/dist-kernel
+sys-kernel/gentoo-kernel-bin
+virtual/dist-kernel
 sys-kernel/gentoo-sources
 net-proxy/snowflake
 x11-misc/sxcs
@@ -14,20 +14,9 @@ app-benchmarks/stress-ng
 app-misc/dragon
 media-gfx/nsxiv
 www-client/ungoogled-chromium-bin
-net-proxy/v2ray-core
-dev-libs/v2ray-geoip-bin
-dev-libs/v2ray-domain-list-community-bin
+net-proxy/v2ray-bin
 net-news/newsboat
-gui-apps/somebar **
-dev-qt/qtwayland
-gui-apps/foot
-dev-libs/tllist
-gui-apps/waylock
-gui-apps/wtype
-gui-apps/wlr-randr
-sys-devel/mold
-sys-devel/gcc
-mail-client/neomutt
-sys-apps/drm_info
-app-office/qownnotes
-gui-apps/tofi
+app-misc/fastfetch
+dev-libs/yyjson
+www-client/firefox
+dev-libs/nss
